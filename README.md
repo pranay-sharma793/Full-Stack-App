@@ -72,6 +72,100 @@ The backend was created with Spring Boot framework written in Java connecting to
 
 Backend Spring Boot app will run on port 8081 and the frontend Angular app will be served on the port 4200. The applications interact via the exposed APIs listed above.
 
-### **Conclusion**
+### **Deploying the code on AWS**
 
-In summary, the frontend and backend applications seamlessly integrated to provide a user-friendly interface for student survey. The use of MySQL as the database ensure the data is persisted and handled efficiently. The application is light weight, modular and scalable for future enhancements.
+1. Push all the existing code to a GitHub repo.
+
+![9](screenshots/9.png)
+
+2. Create a DockerHub Repo and push your latest image.
+(Docker run & build –
+docker build -t surveyformcd .
+docker run -p 8080:8080 surveyformcd
+Docker tag & push -
+docker tag surveyformcd:latest docker.io/surveyformcd:latest
+docker login docker.io
+docker push pranaysharma793/surveyformcd:latest)
+
+![10](screenshots/10.png)
+
+3. Log on to your free-tier AWS account via Learner Lab. From here we would be creating our 
+CI-CD pipeline using Rancher and Jenkins.
+- To begin with create, 3 EC2 instances, one would be our Rancher server, the second 
+would be for the Kubernetes cluster and the third will be the Jenkins instance
+
+![11](screenshots/11.png)
+
+4. We begin with the first instance, which is the Rancher server. Connect to this server and
+install docker in this instance using the following commands:
+- Update: sudo apt-get update
+- Install Docker: sudo apt install docker.io
+- Check docker version once installed: docker –v
+Once docker is installed, we download rancher using the command:
+- sudo docker run --privileged=true -d --restart=unless-stopped -p 80:80 -p 443:443 
+rancher/rancher
+
+![12](screenshots/12.png)
+
+![13](screenshots/13.png)
+
+![14](screenshots/14.png)
+
+5. Once Rancher is successfully started, create a custom Cluster. 
+
+![15](screenshots/15.png)
+
+6. Next you need to register the etcd, the control plane and the worker node on the second EC2 instance which was created for the kubernetes cluster as mentioned earlier. To do this, run the command obtained above (while creating the custom cluster) by logging into the second EC2 instance as shown below.
+
+![16](screenshots/16.png)
+
+7. . Once it is created, you can see the created k8cluster as `Active`.
+
+![17](screenshots/17.png)
+
+8. Deploy the Docker images in the newly created K8s cluster.
+
+![19](screenshots/19.png)
+
+9. Using the `kubectl get all` command, we can see that the pods are in the running state and ready.
+
+![20](screenshots/20.png)
+
+10. We can now access our form using the TCP url of this pod
+
+![21](screenshots/21.png)
+
+11. Install Jenkins in the third EC2 instance.
+
+![22a](screenshots/22a.png)
+
+![22](screenshots/22.png)
+
+12. Create a build pipeline
+
+![23](screenshots/23.png)
+
+![24](screenshots/24.png)
+
+13. Next, come the Jenkins UI which shows the various stages of the Pipeline.
+- Here to test the working of the pipeline, with any change push the github repo a new build is triggered and the image is updated.
+
+![25](screenshots/25.png)
+
+![26](screenshots/26.png)
+
+14. Now, check your survey-form url. You will see that the changes you have made have been reflected in the latest build. This demonstrate the complete working of our pipeline.
+
+![27](screenshots/27.png)
+
+
+#### References:
+
+Setting up git in Eclipse:
+https://www.geo.uzh.ch/microsite/reproducible_research/post/rr-eclipse-git/
+Building docker image from the war file:
+https://aspetraining.com/resources/blog/deploying-your-first-web-app-to-tomcat-on-docker
+To push docker image into the docker hub:
+https://ropenscilabs.github.io/r-docker-tutorial/04-Dockerhub.html
+Setting up Jenkins: https://pkg.jenkins.io/debian/
+Pipeline in Jenkins: https://www.guru99.com/jenkins-pipeline-tutorial.html
