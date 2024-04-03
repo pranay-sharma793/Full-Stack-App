@@ -30,11 +30,11 @@ The application consist of various components to serve the different parts of th
 
 **Screenshots**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f946bd14-7d52-4d1f-9ce6-9a6069d6be8f/38f9047d-7f4a-4d5e-ad41-7a12dbd196e4/Untitled.png)
+![1](screenshots/1.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f946bd14-7d52-4d1f-9ce6-9a6069d6be8f/884b0caf-45e1-4ddb-a617-dee8630a3278/Untitled.png)
+![2](screenshots/2.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f946bd14-7d52-4d1f-9ce6-9a6069d6be8f/246870a2-ea2a-4261-b6c1-fb67b0f2cee0/Untitled.png)
+![3](screenshots/3.png)
 
 ### **Backend: Spring Boot**
 
