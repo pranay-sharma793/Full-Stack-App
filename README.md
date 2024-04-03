@@ -1,5 +1,9 @@
 # Full Stack Application Report
 
+#### 1. Frontend details
+#### 2. Backend details
+#### 3. Deployment of the backend service on Kubernetes using AWS EC2 and Jenkins.
+
 ### **Frontend: AngularJS**
 
 The frontend of the application is built using AngularJS, a JavaScript-based framework for building dynamic web applications.
