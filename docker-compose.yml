@@ -1,0 +1,15 @@
+version: '3'
+services:
+  angular:
+    build:
+      context: ./Frontend
+    ports:
+      - "4201:80"
+    depends_on:
+      - spring-boot
+
+  spring-boot:
+    build:
+      context: ./Backend
+    ports:
+      - "8081:8080"
