@@ -1,9 +1,5 @@
 # Full Stack Application Report
 
-### Introduction
-
-This report provides a detailed overview of a full stack application developed with AngularJS as the frontend framework and Java Spring Boot as the backend framework. The application uses a MySQL database for performing CRUD (Create, Read, Update, Delete) operations through the Java Persistence API (JPA).
-
 ### **Frontend: AngularJS**
 
 The frontend of the application is built using AngularJS, a JavaScript-based framework for building dynamic web applications.
@@ -79,10 +75,3 @@ Backend Spring Boot app will run on port 8081 and the frontend Angular app will 
 ### **Conclusion**
 
 In summary, the frontend and backend applications seamlessly integrated to provide a user-friendly interface for student survey. The use of MySQL as the database ensure the data is persisted and handled efficiently. The application is light weight, modular and scalable for future enhancements.
-
-### Team Members
-
-- Pranay Sharma 
-- Ali Mohiuddin 
-- Nishad Main 
-- Radhika Bilolikar 
