@@ -61,15 +61,16 @@ The backend was created with Spring Boot framework written in Java connecting to
 
 **Screenshots**
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f946bd14-7d52-4d1f-9ce6-9a6069d6be8f/61348db8-4c0c-476e-a0b9-3ac6234a7c66/Untitled.png)
+![4](screenshots/4.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f946bd14-7d52-4d1f-9ce6-9a6069d6be8f/fe5da870-1164-4b35-b40a-ad21d03e00a5/Untitled.png)
+![5](screenshots/5.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f946bd14-7d52-4d1f-9ce6-9a6069d6be8f/2474ab9c-b4c8-447e-ae69-edc809d5903d/Untitled.png)
+![6](screenshots/6.png)
 
-![Screenshot 2023-11-23 at 5.52.34 AM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/f946bd14-7d52-4d1f-9ce6-9a6069d6be8f/82ba1910-81df-45b7-8b24-53279851d4fe/Screenshot_2023-11-23_at_5.52.34_AM.png)
+![7](screenshots/7.png)
 
-![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/f946bd14-7d52-4d1f-9ce6-9a6069d6be8f/2360e4ae-0fe6-48af-80ff-220749ba66b6/Untitled.png)
+![8](screenshots/8.png)
+
 
 ### **Running the Application**
 
